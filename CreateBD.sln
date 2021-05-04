@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateBD", "CreateBD\CreateBD.csproj", "{73E18FB3-88D2-410A-90C9-4F4876ACB902}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddAccounts", "AddAccounts\AddAccounts.csproj", "{BAEC473C-52AD-4227-80C1-A6F96504BC73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73E18FB3-88D2-410A-90C9-4F4876ACB902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E18FB3-88D2-410A-90C9-4F4876ACB902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E18FB3-88D2-410A-90C9-4F4876ACB902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E18FB3-88D2-410A-90C9-4F4876ACB902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAEC473C-52AD-4227-80C1-A6F96504BC73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAEC473C-52AD-4227-80C1-A6F96504BC73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAEC473C-52AD-4227-80C1-A6F96504BC73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAEC473C-52AD-4227-80C1-A6F96504BC73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6BB78F4-FD5D-45DE-9737-A7037244F64F}
+	EndGlobalSection
+EndGlobal
