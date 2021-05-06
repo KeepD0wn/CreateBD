@@ -16,3 +16,4 @@ C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Release\AddAccounts.csproj.
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Release\AddAccounts.csproj.CopyComplete
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Release\AddAccounts.exe
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Release\AddAccounts.pdb
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Release\AddAccounts.csprojAssemblyReference.cache
