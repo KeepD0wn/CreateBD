@@ -15,7 +15,6 @@ C:\Users\gvozd\source\repos\CreateBD\CreateBD\obj\Debug\CreateBD.csproj.CoreComp
 C:\Users\gvozd\source\repos\CreateBD\CreateBD\obj\Debug\CreateBD.csproj.CopyComplete
 C:\Users\gvozd\source\repos\CreateBD\CreateBD\obj\Debug\CreateBD.exe
 C:\Users\gvozd\source\repos\CreateBD\CreateBD\obj\Debug\CreateBD.pdb
-C:\Users\gvozd\source\repos\CreateBD\CreateBD\obj\Debug\CreateBD.csprojAssemblyReference.cache
 C:\Users\gvozd\source\repos\CreateBD\CreateBD\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\gvozd\source\repos\CreateBD\CreateBD\bin\Debug\Google.Protobuf.dll
 C:\Users\gvozd\source\repos\CreateBD\CreateBD\bin\Debug\K4os.Compression.LZ4.dll
