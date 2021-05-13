@@ -13,6 +13,7 @@ namespace AddAccounts
     {
         static void Main(string[] args)
         {
+            Console.Title = "Add Accounts";
             MySqlConnection conn = new MySqlConnection();
             //ДОСТАЁМ И РАССКИДЫВАЕМ ДАННЫЕ АККАУНТОВ ИЗ ТЕКСТОВИКА
             try

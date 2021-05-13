@@ -15,6 +15,7 @@ namespace CreateBD
     {
         static void Main(string[] args)
         {
+            Console.Title = "Create DB";
             MySqlConnection conn = new MySqlConnection();
             try
             {

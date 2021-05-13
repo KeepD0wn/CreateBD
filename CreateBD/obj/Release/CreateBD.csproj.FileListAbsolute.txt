@@ -29,4 +29,3 @@ C:\Users\gvozd\source\repos\CreateBD\CreateBD\bin\Release\System.Runtime.Compile
 C:\Users\gvozd\source\repos\CreateBD\CreateBD\bin\Release\Ubiety.Dns.Core.dll
 C:\Users\gvozd\source\repos\CreateBD\CreateBD\bin\Release\Zstandard.Net.dll
 C:\Users\gvozd\source\repos\CreateBD\CreateBD\bin\Release\Google.Protobuf.pdb
-C:\Users\gvozd\source\repos\CreateBD\CreateBD\obj\Release\CreateBD.csprojAssemblyReference.cache
