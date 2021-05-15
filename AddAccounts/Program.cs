@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.Common;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -14,7 +16,7 @@ namespace AddAccounts
         static void Main(string[] args)
         {
             Console.Title = "Add Accounts";
-            MySqlConnection conn = new MySqlConnection();
+            MySqlConnection conn1 = new MySqlConnection();
             //ДОСТАЁМ И РАССКИДЫВАЕМ ДАННЫЕ АККАУНТОВ ИЗ ТЕКСТОВИКА
             try
             {
@@ -27,10 +29,49 @@ namespace AddAccounts
                     }
                     key = key.Replace("\r\n", "");
 
+                    MySqlConnection conn = new MySqlConnection();
+                    try
+                    {
+                        ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings["DefaultConnection"];
+                        conn = new MySqlConnection(settings.ToString());
+                        conn.Open();
+
+                        var com = new MySqlCommand("USE `MySQL-1964`; " +
+                         "select * from `subs` where keyLic = @keyLic AND subEnd > NOW() AND activeLic = 1 limit 1", conn);
+                        com.Parameters.AddWithValue("@keyLic", key);
+
+                        using (DbDataReader reader = com.ExecuteReader())
+                        {
+                            if (reader.HasRows) //тут уходит на else если нет данных
+                            {
+
+                            }
+                            else
+                            {
+                                conn.Close();
+                                Console.WriteLine("[SYSTEM] License is not active");
+                                Thread.Sleep(5000);
+                                Environment.Exit(0);
+                            }
+                        }
+                        conn.Close();
+                    }
+                    catch
+                    {
+                        conn.Close();
+                        Console.WriteLine("[SYSTEM][404] Something went wrong!");
+                        Thread.Sleep(5000);
+                        Environment.Exit(0);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+
                     if (PcInfo.GetCurrentPCInfo() == key)
                     {
-                        conn = DBUtils.GetDBConnection();
-                        conn.Open();
+                        conn1 = DBUtils.GetDBConnection();
+                        conn1.Open();
                         int countGood = 0;
 
                         string[] subs = default;
@@ -70,7 +111,7 @@ namespace AddAccounts
                             {
                                 var com = new MySqlCommand("USE csgo; " +
                                 "insert into accounts (login, password, secretKey)" +
-                                " values (@login, @password, @secretKey)", conn);
+                                " values (@login, @password, @secretKey)", conn1);
                                 com.Parameters.AddWithValue("@login", login);
                                 com.Parameters.AddWithValue("@password", password);
                                 com.Parameters.AddWithValue("@secretKey", secretKey);
@@ -91,7 +132,7 @@ namespace AddAccounts
                     {
                         Console.WriteLine("[SYSTEM] License not found");
                         Thread.Sleep(5000);
-                        conn.Close();
+                        conn1.Close();
                         Environment.Exit(0);
                     }
                 }
@@ -99,7 +140,7 @@ namespace AddAccounts
                 {
                     Console.WriteLine("[SYSTEM] License not found");
                     Thread.Sleep(5000);
-                    conn.Close();
+                    conn1.Close();
                     Environment.Exit(0);
                 }
             }
@@ -109,7 +150,7 @@ namespace AddAccounts
             }
             finally
             {
-                conn.Close();
+                conn1.Close();
             }
 
             Console.ReadKey();
