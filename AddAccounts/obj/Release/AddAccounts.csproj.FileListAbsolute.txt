@@ -29,3 +29,5 @@ C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Release\System.Runtime.Comp
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Release\Ubiety.Dns.Core.dll
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Release\Zstandard.Net.dll
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Release\Google.Protobuf.pdb
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Release\AddAccounts.Properties.Resources.resources
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Release\AddAccounts.csproj.GenerateResource.cache
