@@ -129,7 +129,7 @@ namespace AddAccounts
                     }
                     else
                     {
-                        Console.WriteLine("[SYSTEM] License not found");
+                        Console.WriteLine("[1][SYSTEM] License not found");
                         Thread.Sleep(5000);
                         conn1.Close();
                         Environment.Exit(0);
@@ -137,7 +137,7 @@ namespace AddAccounts
                 }
                 else
                 {
-                    Console.WriteLine("[SYSTEM] License not found");
+                    Console.WriteLine("[2][SYSTEM] License not found");
                     Thread.Sleep(5000);
                     conn1.Close();
                     Environment.Exit(0);
