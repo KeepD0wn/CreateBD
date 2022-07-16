@@ -31,3 +31,4 @@ C:\Users\gvozd\source\repos\CreateBD\CreateBD\bin\Debug\Zstandard.Net.dll
 C:\Users\gvozd\source\repos\CreateBD\CreateBD\bin\Debug\Google.Protobuf.pdb
 C:\Users\gvozd\source\repos\CreateBD\CreateBD\obj\Debug\CreateBD.Properties.Resources.resources
 C:\Users\gvozd\source\repos\CreateBD\CreateBD\obj\Debug\CreateBD.csproj.GenerateResource.cache
+C:\Users\gvozd\source\repos\CreateBD\CreateBD\obj\Debug\CreateBD.csproj.AssemblyReference.cache
