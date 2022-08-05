@@ -27,8 +27,8 @@ C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\System.Memory.dll
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\Ubiety.Dns.Core.dll
-C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\Zstandard.Net.dll
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\Google.Protobuf.pdb
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\AddAccounts.Properties.Resources.resources
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\AddAccounts.csproj.GenerateResource.cache
-C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\AddAccounts.csproj.AssemblyReference.cache
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\ZstdNet.dll
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\BouncyCastle.Crypto.xml
