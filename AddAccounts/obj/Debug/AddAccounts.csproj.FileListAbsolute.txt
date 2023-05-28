@@ -1,6 +1,3 @@
-C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\AddAccounts.exe.config
-C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\AddAccounts.exe
-C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\AddAccounts.pdb
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\Google.Protobuf.xml
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\K4os.Compression.LZ4.xml
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\K4os.Compression.LZ4.Streams.xml
@@ -13,8 +10,6 @@ C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\System.Numerics.Vecto
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\AddAccounts.csproj.CoreCompileInputs.cache
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\AddAccounts.csproj.CopyComplete
-C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\AddAccounts.exe
-C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\AddAccounts.pdb
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\Google.Protobuf.dll
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\K4os.Compression.LZ4.dll
@@ -32,3 +27,15 @@ C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\AddAccounts.Propertie
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\AddAccounts.csproj.GenerateResource.cache
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\ZstdNet.dll
 C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\Add Accounts.exe.config
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\Add Accounts.exe.manifest
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\Add Accounts.application
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\Add Accounts.exe
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\bin\Debug\Add Accounts.pdb
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\AddAccounts.csproj.AssemblyReference.cache
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\AddAccounts.csproj.SuggestedBindingRedirects.cache
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\Add Accounts.TrustInfo.xml
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\Add Accounts.exe.manifest
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\Add Accounts.application
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\Add Accounts.exe
+C:\Users\gvozd\source\repos\CreateBD\AddAccounts\obj\Debug\Add Accounts.pdb

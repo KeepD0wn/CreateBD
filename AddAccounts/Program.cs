@@ -13,6 +13,77 @@ namespace AddAccounts
 {
     class Program
     {
+        private static void CheckSubscribe(string key)
+        {
+            MySqlConnection conn = new MySqlConnection();
+            try
+            {
+                conn = new MySqlConnection(Properties.Resources.String1);
+                conn.Open();
+
+                var com = new MySqlCommand("USE subs; " +
+                 "select * from `subs` where keyLic = @keyLic AND subEnd > NOW() AND activeLic = 1 limit 1", conn);
+                com.Parameters.AddWithValue("@keyLic", key);
+
+                using (DbDataReader reader = com.ExecuteReader())
+                {
+                    if (reader.HasRows) //тут уходит на else если нет данных
+                    {
+                        reader.Read();
+                        string dataEnd = reader.GetString(2);
+                        Console.WriteLine($"Subscription will end {dataEnd}");
+                        reader.Close();
+                    }
+                    else
+                    {
+                        conn.Close();
+                        Console.WriteLine("[500][SYSTEM] License is not active");
+                        Thread.Sleep(5000);
+                        Environment.Exit(0);
+                    }
+                }
+                conn.Close();
+            }
+            catch
+            {
+                conn.Close();
+                Console.WriteLine("[SYSTEM][404] Something went wrong!");
+                Thread.Sleep(5000);
+                Environment.Exit(0);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        static void CreateDB(MySqlConnection con)
+        {
+            string createDBCommand = "CREATE DATABASE IF NOT EXISTS csgo; USE csgo;";
+            var cmd = new MySqlCommand(createDBCommand, con);
+            cmd.ExecuteNonQuery();
+
+            string createDBCommand1 = "CREATE TABLE IF NOT EXISTS `accounts` (" +
+                "`id` int NOT NULL AUTO_INCREMENT," +
+                "`login` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL," +
+                "`password` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL," +
+                "`secretKey` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL," +
+                "`isOnline` tinyint DEFAULT '0'," +
+                "`lastDateOnline` datetime DEFAULT CURRENT_TIMESTAMP," +
+                "`canPlayDate` datetime DEFAULT CURRENT_TIMESTAMP," +
+                "`folderCreated` tinyint DEFAULT '0'," +
+                "PRIMARY KEY (`id`)," +
+                "UNIQUE KEY `id_UNIQUE` (`id`)," +
+                "UNIQUE KEY `login_UNIQUE` (`login`)" +
+                ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 " +
+                "COLLATE=utf8mb4_0900_ai_ci";
+
+            var cmd1 = new MySqlCommand(createDBCommand1, con);
+            cmd1.ExecuteNonQuery();
+
+            Console.WriteLine("Data base created");
+        }
+
         static void Main(string[] args)
         {
             Console.Title = "Add Accounts";
@@ -20,58 +91,24 @@ namespace AddAccounts
             //ДОСТАЁМ И РАССКИДЫВАЕМ ДАННЫЕ АККАУНТОВ ИЗ ТЕКСТОВИКА
             try
             {
-                if (true)//File.Exists($@"{AppDomain.CurrentDomain.BaseDirectory}\License.lic")
+                if (File.Exists($@"{AppDomain.CurrentDomain.BaseDirectory}\License.lic"))//File.Exists($@"{AppDomain.CurrentDomain.BaseDirectory}\License.lic")
                 {
-                    //string key = "";
-                    //using (StreamReader sr = new StreamReader($@"{AppDomain.CurrentDomain.BaseDirectory}\License.lic"))
-                    //{
-                    //    key = sr.ReadToEnd();
-                    //}
-                    //key = key.Replace("\r\n", "");
-
-                    //MySqlConnection conn = new MySqlConnection();
-                    //try
-                    //{
-                    //    conn = new MySqlConnection(Properties.Resources.String1);
-                    //    conn.Open();
-
-                    //    var com = new MySqlCommand("USE `MySQL-5846`; " +
-                    //     "select * from `subs` where keyLic = @keyLic AND subEnd > NOW() AND activeLic = 1 limit 1", conn);
-                    //    com.Parameters.AddWithValue("@keyLic", key);
-
-                    //    using (DbDataReader reader = com.ExecuteReader())
-                    //    {
-                    //        if (reader.HasRows) //тут уходит на else если нет данных
-                    //        {
-
-                    //        }
-                    //        else
-                    //        {
-                    //            conn.Close();
-                    //            Console.WriteLine("[SYSTEM] License is not active");
-                    //            Thread.Sleep(5000);
-                    //            Environment.Exit(0);
-                    //        }
-                    //    }
-                    //    conn.Close();
-                    //}
-                    //catch
-                    //{
-                    //    conn.Close();
-                    //    Console.WriteLine("[SYSTEM][404] Something went wrong!");
-                    //    Thread.Sleep(5000);
-                    //    Environment.Exit(0);
-                    //}
-                    //finally
-                    //{
-                    //    conn.Close();
-                    //}
-
-                    if (true) //PcInfo.GetCurrentPCInfo() == key
+                    string key = "";
+                    using (StreamReader sr = new StreamReader($@"{AppDomain.CurrentDomain.BaseDirectory}\License.lic"))
                     {
+                        key = sr.ReadToEnd();
+                    }
+                    key = key.Replace("\r\n", "");                    
+
+                    if (PcInfo.GetCurrentPCInfo() == key) //PcInfo.GetCurrentPCInfo() == key
+                    {
+                        CheckSubscribe(key);
+
                         conn1 = DBUtils.GetDBConnection();
                         conn1.Open();
                         int countGood = 0;
+
+                        CreateDB(conn1);
 
                         string[] subs = default;
                         if (File.Exists($@"{AppDomain.CurrentDomain.BaseDirectory}\accounts.txt"))
